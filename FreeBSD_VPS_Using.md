@@ -1,5 +1,5 @@
 # FreeBSD VPS(Virtual Private System)を扱う
-## ホストOS FreeBSDのインストール
+## 1. ホストOS FreeBSDのインストール
 FreeBSD VPSが対応しているのは，FreeBSD-8.XからFreeBSD-10.Xとされている  
 ※ FreeBSD-11.0-RELEASEでもVPSの動作した気がする…  
 FreeBSD VPSを導入する際は，pkgを利用した方法がよく紹介されているが，pkgが利用できるのはFreeBSD-10.Xからのようなので，FreeBSD-10.3-RELEASEの導入が良いかも．  
@@ -12,7 +12,7 @@ FreeBSD VPSを導入する際は，pkgを利用した方法がよく紹介され
 1. Partition : Manual(データが飛ぶ可能性があるので十分注意してください)  
 1. ネットワークの設定は，繋がるものがあればこの段階で設定することをオススメします．(後でも設定はできますが，ここでやる方がいい)
 
-## FreeBSD VPSの導入
+## 2. FreeBSD VPSの導入
 ※ インターネットには，すでに繋がっているとします  
 まず，curl または wget をpkgでインストールします．(今回はcurlを想定)  
 
@@ -32,4 +32,9 @@ FreeBSD VPSを導入する際は，pkgを利用した方法がよく紹介され
 
 `vpsctl`
 
-## FreeBSD VPSを使ってみる
+## 3. FreeBSD VPSを使ってみる
+ここまでくればあとは
+
+<http://www.7he.at/freebsd/vps/docs/setup_testenv.txt>
+
+に従って行うと良い．
