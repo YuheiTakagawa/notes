@@ -1,4 +1,7 @@
 # FreeBSD VPS(Virtual Private System)を扱う
+
+注意)  
+FreeBSD VPSを導入すると，USBの認識をFreeBSDがしなくなる可能性があるので，USBキーボードなどの入力もできなくなる場合があります．(カーネルかモジュールが上書きされるために，起きる問題だと思われます．)
 ## 1. ホストOS FreeBSDのインストール
 FreeBSD VPSが対応しているのは，FreeBSD-8.XからFreeBSD-10.Xとされている  
 ※ FreeBSD-11.0-RELEASEでもVPSの動作した気がする…  
