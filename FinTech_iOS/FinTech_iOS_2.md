@@ -1,4 +1,21 @@
-# Fintech-FUN iOS勉強会第2回 2017/06/05資料
+# FinTech-FUN iOS勉強会第2回 2017/06/05資料
+
+## let/varを使った宣言について
+Swift3では，定数(let)と変数(var)という型がある．定数(let)で宣言した場合は，値に変更を加えることができない．一方，変数(var)で宣言した場合は，値を後からでも変更することができる．また，一般的にはInt型やString型などの明示的に宣言する必要がある．
+
+```
+var i: Int = 0            //変数のIntを宣言し，iに0を代入
+let j: Int = 5            //定数のIntを宣言し，jに5を代入
+
+i = 9                     //iに9が代入される
+j = 6                     //エラーが出てくる
+```
+**定数(let)は再代入不可**　→　変更しない値を使いたい時に利用  
+また，以下のようにInt型やString型を明示的に宣言しなくても良い場合がある．(型推論)
+```
+var i = 0                 //変数iにInt型の0を代入→iはInt型になる
+let j = "HelloWorld"      //定数jにString型を代入→jはString型になる
+```
 
 ## ViewControllerについて
 iOSに限らず，アプリケーション開発(Web含む)の様々な場面でViewやControllerなどの概念がある．これを **MVC(Model View Controller)** という．
@@ -154,3 +171,38 @@ class ViewController: UIViewController {
  - 第1引数 :  **self** self以外はまずない
  - 第2引数 :  **action:** selectorというものでClickActionを呼ぶ
  - 第3引数 :  クリックにも色々種類(押した瞬間，離した瞬間など)があり，それを指定する．今回は，クリックした瞬間の.touchDown．
+
+## 遷移先画面から元の画面に戻る方法
+前回した方法は，画面遷移にはSegueを使い，元の画面に戻るときも画面にSegueを繋いで画面遷移をしていた．しかし，この方法は画面遷移のたびに新しい画面を作っているので，何度も画面遷移を繰り返すとアプリが重くなってしまう．  
+そこで，画面を新しく作らず元の画面に遷移する方法を紹介する．(ドットインストールで紹介されている)
+
+まず，StoryboardでViewController2つ作成し，それぞれにボタンを1つずつ設置する．初めの画面からもう1つの画面へ遷移させるSegueを作る．
+
+![](../img/ios_2_5.png)
+
+次にViewController.swiftを以下のように書き換える．
+
+```
+import UIKit
+
+class ViewController: UIViewController {
+  @IBAction func unwindToTop(segue: UIStoryboardSegue){
+
+  }
+  override func viewDidLoad() {
+        super.viewDidLoad()
+  }
+  override func didReceiveMemoryWarning() {
+    super.didReceiveMemoryWarning()
+    // Dispose of any resources that can be recreated.
+  }
+}
+```
+@IBAction func unwindToTop(segue: UIStoryboardSegue)は画面を戻す以外何もしないので，処理は書いていない．  
+
+遷移先のボタンをControl押しながらドラッグ．ViewControllerの上に3つのアイコンが出てくるので，右にドロップ. すると，以下の画面のようになる
+
+![](../img/ios_2_6.png)
+
+unwindToTopWithSegueを選択する．  
+これで起動してみると，新規に画面を作成しないで元の画面を表示することができる．
