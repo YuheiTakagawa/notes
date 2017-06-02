@@ -206,3 +206,8 @@ class ViewController: UIViewController {
 
 unwindToTopWithSegueを選択する．  
 これで起動してみると，新規に画面を作成しないで元の画面を表示することができる．
+
+## 画面遷移で値を受けわたす
+View1つにつきControllerは1つ割り当てるのが一般的．画面遷移で値を受けわたす為には，複数画面に対応したコードが複数存在する必要がある．まず，ViewControllerを複数つくり，コードと対応させる．
+別のViewController.swiftを作るには，ツールバーにあるFile > New > Fileから，Cocoa Touch Classを選択し，Class名を任意のもの(ここではViewController2とする)に設定する．Subclass ofはどのクラスをベースに使うかというもので，今回のようにViewControllerを作りたい場合はViewControllerを選択してNextを押す．どこに保存するかを選んで(普通はプロジェクトディレクトリ)Create
+## コードで画面遷移
