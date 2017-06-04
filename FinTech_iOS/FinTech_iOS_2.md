@@ -182,7 +182,7 @@ class ViewController: UIViewController {
 
 次にViewController.swiftを以下のように書き換える．
 
-```
+```swift:ViewController.swift
 import UIKit
 
 class ViewController: UIViewController {
@@ -209,5 +209,68 @@ unwindToTopWithSegueを選択する．
 
 ## 画面遷移で値を受けわたす
 View1つにつきControllerは1つ割り当てるのが一般的．画面遷移で値を受けわたす為には，複数画面に対応したコードが複数存在する必要がある．まず，ViewControllerを複数つくり，コードと対応させる．
-別のViewController.swiftを作るには，ツールバーにあるFile > New > Fileから，Cocoa Touch Classを選択し，Class名を任意のもの(ここではViewController2とする)に設定する．Subclass ofはどのクラスをベースに使うかというもので，今回のようにViewControllerを作りたい場合はViewControllerを選択してNextを押す．どこに保存するかを選んで(普通はプロジェクトディレクトリ)Create
-## コードで画面遷移
+別のViewController.swiftを作るには，ツールバーにある File > New > Fileから，Cocoa Touch Classを選択し，Class名を任意のもの(ここではViewController2とする)に設定する．Subclass ofはどのクラスをベースに使うかというもので，今回のようにViewControllerを作りたい場合はViewControllerを選択してNextを押す．どこに保存するかを選んで(普通はプロジェクトディレクトリ)Create  
+Storyboardでの配置は以下の画像のようにするといい．画面遷移もできるように．(今回はカウントの数値を受けわたす)
+
+![](../img/ios_2_7)
+
+```swift:ViewController.swift
+import UIKit
+
+class ViewController: UIViewController {
+
+    @IBAction func unwindToTop(segue: UIStoryboardSegue){
+
+    }
+    @IBOutlet weak var label1: UILabel!
+    @IBOutlet weak var button1: UIButton!
+
+    var count = 0
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        label1.text = String(count)
+        button1.addTarget(self, action:#selector(self.clickAction(sender:)), for: .touchDown)
+    }
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+
+    func clickAction(sender: UIStoryboardSegue){
+        count += 1;
+        label1.text = String(count)
+    }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let viewController2 = segue.destination as! ViewController2
+        viewController2.count = count
+    }
+}
+```
+
+```swift:ViewController2.swift
+import UIKit
+
+class ViewController2: UIViewController {
+
+    @IBOutlet weak var label2: UILabel!
+    var count: Int = 0
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        label2.text = String(count)
+        // Do any additional setup after loading the view.
+    }
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+}
+```
+
+プログラム自体は，これまでの内容を組み合わせたものに値渡しに必要なものを追加したものである．受けわたす為には，まずViewController2.swiftで受け取る為の変数を定義する．  
+次に受け渡しをする為の関数prepareをViewController.swiftで呼び出す必要がある．prepareの引数はSegueで値渡しする際はだいたいこのようになる．
+`let viewController2 = segue.destination as! ViewController2`
+segue.destinationは遷移先の変数にアクセスできる．これを定数に代入して，遷移先のコントローラーに値を渡すことができる．
