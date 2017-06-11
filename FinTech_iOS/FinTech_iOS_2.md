@@ -1,3 +1,4 @@
+<style>.syntax--plain{color:black;} #fintech-fun-ios-2-2017-06-05-{font-size:2.0em;}</style>
 # FinTech-FUN iOS勉強会第2回 2017/06/05資料
 
 ## let/varを使った宣言について
@@ -38,6 +39,7 @@ ViewController.swiftというControllerを記述するswiftファイルに記述
 以下のようなコードをViewController.swiftに書けばラベルの作成ができる．
 
 ```swift:ViewController.swift
+/*ViewController.swift*/
 import UIKit
 
 class ViewController: UIViewController {
@@ -69,6 +71,7 @@ class ViewController: UIViewController {
 UIButton()の例も以下に挙げる
 
 ```swift:ViewController.swift
+/*ViewController.swift*/
 import UIKit
 
 class ViewController: UIViewController {
@@ -133,6 +136,7 @@ Storyboardで作成したオブジェクトをコードで扱えるようにす�
 StoryboardでLabelとButtonを追加して，ViewController.swiftとリンクさせる．
 
 ```swift:ViewController.swift
+/*ViewController.swift*/
 import UIKit
 
 class ViewController: UIViewController {
@@ -183,6 +187,7 @@ class ViewController: UIViewController {
 次にViewController.swiftを以下のように書き換える．
 
 ```swift:ViewController.swift
+/*ViewController.swift*/
 import UIKit
 
 class ViewController: UIViewController {
@@ -212,9 +217,10 @@ View1つにつきControllerは1つ割り当てるのが一般的．画面遷移�
 別のViewController.swiftを作るには，ツールバーにある File > New > Fileから，Cocoa Touch Classを選択し，Class名を任意のもの(ここではViewController2とする)に設定する．Subclass ofはどのクラスをベースに使うかというもので，今回のようにViewControllerを作りたい場合はViewControllerを選択してNextを押す．どこに保存するかを選んで(普通はプロジェクトディレクトリ)Create  
 Storyboardでの配置は以下の画像のようにするといい．画面遷移もできるように．(今回はカウントの数値を受けわたす)
 
-![](../img/ios_2_7)
+![](../img/ios_2_7.png)
 
 ```swift:ViewController.swift
+/*ViewController.swift*/
 import UIKit
 
 class ViewController: UIViewController {
@@ -250,6 +256,7 @@ class ViewController: UIViewController {
 ```
 
 ```swift:ViewController2.swift
+/*ViewController2.swift*/
 import UIKit
 
 class ViewController2: UIViewController {
@@ -272,5 +279,7 @@ class ViewController2: UIViewController {
 
 プログラム自体は，これまでの内容を組み合わせたものに値渡しに必要なものを追加したものである．受けわたす為には，まずViewController2.swiftで受け取る為の変数を定義する．  
 次に受け渡しをする為の関数prepareをViewController.swiftで呼び出す必要がある．prepareの引数はSegueで値渡しする際はだいたいこのようになる．
+
 `let viewController2 = segue.destination as! ViewController2`
+
 segue.destinationは遷移先の変数にアクセスできる．これを定数に代入して，遷移先のコントローラーに値を渡すことができる．
