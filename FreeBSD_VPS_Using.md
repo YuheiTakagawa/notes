@@ -41,3 +41,13 @@ FreeBSD VPSを導入する際は，pkgを利用した方法がよく紹介され
 <http://www.7he.at/freebsd/vps/docs/setup_testenv.txt>
 
 に従って行うと良い．
+
+## 4. VPSインスタンス内で /dev/null に関するエラーが出るとき
+VPSインスタンスを作成して，いざVPSインスタンス内で処理をしようとすると，様々なところで「/dev/nullがないよ」というエラーが出てくる．実際にVPSインスタンス内の/devを見てみると何もない…  
+つまり，ホストの/devファイルをマウントすればいいわけです．  
+
+``
+\#  mount -t devfs dev /usr/chroot/dev
+``
+
+を実行．ただし， chrootは3. FreeBSD VPSを使ってみるで作成したであろうvps/test01に変更する必要がある．
