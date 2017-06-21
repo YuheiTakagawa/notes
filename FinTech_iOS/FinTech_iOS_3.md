@@ -1,4 +1,4 @@
-<style>.syntax--plain{color:black;} #fintech-fun-ios-2-2017-06-05-{font-size:2.0em;}</style>
+<style>.syntax--plain{color:black;} #fintech-fun-ios-3-2017-06-12-{font-size:2.0em;}</style>
 # FinTech-FUN iOS勉強会第3回 2017/06/12資料
 
 前回はボタンを作って画面遷移，画面遷移で値を渡すというようにiOSアプリケーションに最も基本な部分を学んだ．前回はlabelでの値渡しやbuttonの操作だけであったが，Text FieldやPickerなど様々な機能の使い方を自ら学習してもらえるとありがたいです．  
@@ -138,3 +138,11 @@ userDefaults.set(count, forKey: "count")      //インスタンスuserDefaults�
 let ret = userDefaults.integer(forKey: "count")         //インスタンスuserDefaultsの"count"に保存されているintを
 取得
 ```
+
+- UserDefaults.standard を使ってインスタンスを生成する
+- .set(count, forKey: "count") は第1引数のcountを型推論でintと判断して，Keyである"count"と紐づけて保存する
+- 取り出すには，.integer(forKey: \_)を使ってintを取り出す．他にも，.string()や.bool()などを使うことで各種の型でデータを取り出すことができる．
+- .objectを使うと様々な型のデータを取り出すことができる．
+ - ただし，取り出した後の処理が面倒になるので，色々理解を深めておくといいかも．
+
+JSONとUserDefaultsを組み合わせて利用することで，アプリケーション開発をより順調に進めることができる．
