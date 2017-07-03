@@ -5,7 +5,7 @@ FreeBSD VPSを導入すると，USBの認識をFreeBSDがしなくなる可能�
 ## 1. ホストOS FreeBSDのインストール
 FreeBSD VPSが対応しているのは，FreeBSD-8.XからFreeBSD-10.Xとされている  
 ※ FreeBSD-11.0-RELEASEでもVPSの動作した気がする…  
-FreeBSD VPSを導入する際は，pkgを利用した方法がよく紹介されているが，pkgが利用できるのはFreeBSD-10.Xからのようなので，FreeBSD-10.3-RELEASEの導入が良いかも．  
+FreeBSD VPSを導入する際は，pkgを利用した方法がよく紹介されているが，pkgが利用できるのはFreeBSD-10.Xからのようなので，FreeBSD-10.3-RELEASEの導入が良いかも．(uefi bootで導入をすると起動時にしなくなる可能性もなくは無いので注意) 
 <https://www.freebsd.org/where.html>よりFreeBSDのインストールイメージはダウンロードできるので，環境に合わせて選んでください．  
 インストールの設定は各自で色々なサイトを探ってもらえると良いかも．  
 いつも自分が行なっている設定を紹介  
