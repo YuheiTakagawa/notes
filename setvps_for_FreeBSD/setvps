@@ -1,0 +1,14 @@
+#!/bin/sh
+ifconfig em0 1.2.3.4
+
+/etc/rc.vpssetup.sh
+
+while :
+do
+var=`/sbin/ifconfig vps0 | grep UP`
+if [  var  ]
+then
+ifconfig vps0 192.168.10.90
+break
+fi
+done
