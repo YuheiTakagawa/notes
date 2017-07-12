@@ -131,19 +131,6 @@
   width: 25em !important;
 }
 
-pre.editor-colors .gutter .line-number.latex-error {
-  border-left: 2px solid #d13b2e;
-  padding-left: calc(0.5em - 2px);
-}
-pre.editor-colors .gutter .line-number.latex-warning {
-  border-left: 2px solid #ad7c0b;
-  padding-left: calc(0.5em - 2px);
-}
-pre.editor-colors .gutter .line-number.latex-info {
-  border-left: 2px solid #0f82e6;
-  padding-left: calc(0.5em - 2px);
-}
-
 pre.editor-colors {
   background-color: #282c34;
   color: #abb2bf;
@@ -515,44 +502,77 @@ pre.editor-colors .fold-marker:after {
 }
 </style>
   </head>
-  <body class='markdown-preview' data-use-github-style><p><style>.syntax--plain{color:black;} #fintech-fun-ios-4-2017-06-19-{font-size:2.0em;}</style></p>
-<h1 id="fintech-fun-ios-4-2017-06-19-">FinTech-FUN iOS勉強会第4回 2017/06/19資料</h1>
+  <body class='markdown-preview' data-use-github-style><p><style>.syntax--plain{color:black;} #fintech-fun-ios-5-2017-07{font-size:2.0em;}</style></p>
+<h1 id="fintech-fun-ios-5-2017-07-">FinTech-FUN iOS勉強会第5回 2017/07資料</h1>
 <h2 id="slack-">slackで質問されたこと</h2>
 <pre class="editor-colors lang-swift:"><div class="line"><span class="syntax--text syntax--plain syntax--null-grammar"><span>var&nbsp;obj:&nbsp;[key:value]</span></span></div><div class="line"><span class="syntax--text syntax--plain syntax--null-grammar"><span>var&nbsp;obj:&nbsp;Dictionary&lt;key,value&gt;</span></span></div></pre>
 <p>※keyとvalueには型が入る．
 の違いがわからない．上の[]はDictionaryを宣言する簡易バージョン，下の&lt;&gt;はDictionaryを宣言する元のやつ，結局は同じことを指している．初期化する時にも似た感じでできる．下は簡易的に宣言したものにDictionaryのインスタンスを代入する2種類の方法を用いてる．</p>
 <pre class="editor-colors lang-swift:"><div class="line"><span class="syntax--text syntax--plain syntax--null-grammar"><span>var&nbsp;obj:&nbsp;[key:value]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//簡易的な宣言</span></span></div><div class="line"><span class="syntax--text syntax--plain syntax--null-grammar"><span>obj&nbsp;=&nbsp;Dictionary&lt;key,value&gt;()&nbsp;&nbsp;&nbsp;&nbsp;//Dictionaryの元の形で初期化&nbsp;&nbsp;(丸かっこの前は空白あってもなくてもいい)</span></span></div><div class="line"><span class="syntax--text syntax--plain syntax--null-grammar"><span>//obj&nbsp;=&nbsp;[key:value]&nbsp;()&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//簡易的な形で初期化&nbsp;(丸かっこの前は空白あり)</span></span></div></pre>
+<h2 id="-">関数でのリターンの仕方</h2>
+<p>swiftに限らず他の言語でも，関数でreturnを利用する時には返り値の型が必要になる．swiftでも当然返り値の型が必要になる．</p>
+<pre class="editor-colors lang-swift:"><div class="line"><span class="syntax--text syntax--plain syntax--null-grammar"><span>func&nbsp;calcAdd(a:&nbsp;Int,&nbsp;b:&nbsp;Int)&nbsp;-&gt;&nbsp;Int{</span></span></div><div class="line"><span class="syntax--text syntax--plain syntax--null-grammar"><span>&nbsp;&nbsp;return&nbsp;a&nbsp;+&nbsp;b</span></span></div><div class="line"><span class="syntax--text syntax--plain syntax--null-grammar"><span>}</span></span></div></pre>
+<p>上記のように，<code style="font-family: Ricty Diminished;">-&gt; 型名</code>で返り値の型を宣言することができる．</p>
 <h2 id="-">オブジェクト指向プログラミング</h2>
-<p><strong>オブジェクト指向についてある程度理解している人は読み飛ばしてくれて大丈夫です．</strong>\
-オブジェクト指向について，理解してもらえるとアプリケーション開発に役立つはず．それ以外にも様々な場所でこの考え方は利用されているので，身につけておいて欲しいです．(今年度のFinTechのiOS開発でどれくらい役に立つかは不明)．これまで実際にButtonやLabelなどを作成するのが簡単にできるのは，このオブジェクト指向に基づいているからです．Swiftだけでなく，JavaやC#などをオブジェクト指向言語と呼びます．\
-このページを参考にしてます．<a href="https://eng-entrance.com/what-oop">https://eng-entrance.com/what-oop</a>\
-<strong>※正直，オブジェクト指向は説明するのが難しいです．</strong> 自分も2年前，初めて触れた時意味がわからなかった…　色々さわっていくうちに自然と意味がわかっていったので，<strong>今回は軽く基礎知識みたいなのを身につけてもらえればと思っています．全体的なざっくりしたイメージを理解してください．</strong>\
-夏休み前までに，最低限理解して覚えて欲しいもの→オブジェクト(インスタンス)・クラス・メソッド(操作)・プロパティ(属性)
+<p><strong>オブジェクト指向についてある程度理解している人は読み飛ばしてくれて大丈夫です．</strong>
+オブジェクト指向について，理解してもらえるとアプリケーション開発に役立つはず．それ以外にも様々な場所でこの考え方は利用されているので，身につけておいて欲しいです．(今年度のFinTechのiOS開発でどれくらい役に立つかは不明)．これまで実際にButtonやLabelなどを作成するのが簡単にできるのは，このオブジェクト指向に基づいているからです．Swiftだけでなく，JavaやC#などをオブジェクト指向言語と呼びます．  </p>
+<ul>
+<li>このページを参考にしてます．  <ul>
+<li><a href="https://eng-entrance.com/what-oop">https://eng-entrance.com/what-oop</a>  </li>
+<li><strong><a href="http://www.atmarkit.co.jp/ait/articles/1511/17/news015.html">http://www.atmarkit.co.jp/ait/articles/1511/17/news015.html</a></strong>  </li>
+</ul>
+</li>
+</ul>
+<p><strong>※正直，オブジェクト指向は説明するのが難しいです．</strong> 自分も2年前，初めて触れた時意味がわからなかった…　色々さわっていくうちに自然と意味がわかっていったので，<strong>今回は軽く基礎知識みたいなのを身につけてもらえればと思っています．全体的なざっくりしたイメージを理解してください．</strong><br>夏休み前までに，最低限理解して覚えて欲しいもの→オブジェクト(インスタンス)・クラス・メソッド(操作)・プロパティ(属性)
 開発本格的な開発前に理解して欲しいもの(設計書からコードを書くには必要な知識)→カプセル化・継承</p>
 <h3 id="-">オブジェクト指向とは何か</h3>
-<p>簡単に言えば，プログラムを現実世界の様々なものに近づけることで，開発・管理・運用しやすくするもの．\
-例としてテレビをあげる．<strong>どのメーカーのどんなテレビ</strong> でも，チャンネルを記憶していて，リモコンで操作し，画面を表示させることができる．このように，全てのテレビは共通のデータ(チャンネル)や機能(リモコン操作・画面表示)を持つ．量産・改良することをイメージして欲しい．SONYやPanasonic・HITACHIなどの各種メーカーが新型テレビに対して，同じデータと同じ操作を毎回プログラムするのはコストがかかる．過去に作ったテレビの機能を流用したい・メーカー共通のテレビのフレームワークを作っておきたいという考えになります．そんな時にオブジェクト指向が便利です．共通のデータや操作ができるように同じような中身の関数や変数をなんども定義しなくてもいい．とか色々利点があります．\
-あくまでテレビは例なので…　ご了承ください</p>
+<p>簡単に言えば，プログラムを現実世界の様々なものに近づけることで，開発・管理・運用しやすくするもの．<br>例としてテレビをあげる．<strong>どのメーカーのどんなテレビ</strong> でも，チャンネルを記憶していて，リモコンで操作し，画面を表示させることができる．このように，全てのテレビは共通のデータ(チャンネル)や機能(リモコン操作・画面表示)を持つ．量産・改良することをイメージして欲しい．SONYやPanasonic・HITACHIなどの各種メーカーが新型テレビに対して，同じデータと同じ操作を毎回プログラムするのはコストがかかる．過去に作ったテレビの機能を流用したい・メーカー共通のテレビのフレームワークを作っておきたいという考えになります．そんな時にオブジェクト指向が便利です．共通のデータや操作ができるように同じような中身の関数や変数をなんども定義しなくてもいい．とか色々利点があります．<br>あくまでテレビは例なので…　ご了承ください</p>
 <h4 id="-">そもそもオブジェクトとは</h4>
-<p>オブジェクトとは，「対象」「物」という意味で、プログラミングにおいては <strong>データと処理の集まり</strong> である．\
-テレビの例　各メーカーのそれぞれのテレビがオブジェクトである．</p>
+<p>オブジェクトとは，「対象」「物」という意味で、プログラミングにおいては <strong>データと処理の集まり</strong> である．<br>テレビの例　各メーカーのそれぞれのテレビがオブジェクトである．</p>
 <p><img src="/Users/roto/notes/img/ios_5_1.png" alt=""></p>
 <p>このテレビの例では，メーカー名やサイズなどのテレビの基本データしかない．これにテレビの処理を追加してみる．</p>
 <p><img src="/Users/roto/notes/img/ios_5_2.png" alt=""></p>
-<p>それぞれのテレビに対して，画面表示・チャンネル変更・音出力という処理が追加された．(基本的な処理のみを追加)\
-このように，データと処理が一つの塊として扱うことができるのが，オブジェクトである．</p>
+<p>それぞれのテレビに対して，画面表示・チャンネル変更・音出力という処理が追加された．(基本的な処理のみを追加)<br>このように，データと処理が一つの塊として扱うことができるのが，オブジェクトである．また，インスタンスという言葉をよく聞くかもしれないが，オブジェクトと同意であるという認識で良い． <strong>オブジェクト＝インスタンス</strong></p>
 <h4 id="-">クラス</h4>
-<p>上のオブジェクトの説明で，共通のデータや処理が追加された．テレビのサイズや価格などが表記されていないと，購入する際に比較するのが非常に不便になる．このようなデータや処理の追加を必ず表記するためには，設計書(企画書)があるといい．設計書からテレビ(オブジェクト)を作るとミスなく同じものを作ることができる．設計書の役割を果たすのがクラスである．\
-テレビクラスは以下のようになる．</p>
+<p>上のオブジェクトの説明で，共通のデータや処理が追加された．テレビのサイズや価格などが表記されていないと，購入する際に比較するのが非常に不便になる．このようなデータや処理の追加を必ず表記するためには，設計書(企画書)があるといい．設計書からテレビ(オブジェクト)を作るとミスなく同じものを作ることができる．設計書の役割を果たすのがクラスである．<br>テレビクラスは以下のようになる．</p>
 <p><img src="/Users/roto/notes/img/ios_5_3.png" alt=""></p>
 <p>このクラスから様々なテレビを作成することができ，それぞれのテレビは共通して同じ処理をすることができる．</p>
 <p><img src="/Users/roto/notes/img/ios_5_4.png" alt=""></p>
+<p><strong>インスタンス(オブジェクト)はクラスから作られる</strong> このインスタンスを作ることを <strong>インスタンス化</strong> とも呼ぶ．</p>
 <h4 id="-">プロパティ(属性)</h4>
-<p>オブジェクトが持つデータのことをプロパティ(属性)という．テレビだと，「メーカー」や「価格」などのこと．それ以外にも，オブジェクトの状態を表すデータ「テレビがついている」，「現在のチャンネル」とか様々な</p>
+<p>インスタンスが持つデータのことをプロパティ(属性)という．テレビだと，「メーカー」や「価格」などのこと．それ以外にも，オブジェクトの状態を表すデータ「テレビがついている」，「現在のチャンネル」なども存在する．上記のテレビの例の図を見てもらえばわかるように，「メーカー」や「価格」はそれぞれのインスタンスごとに保持している．</p>
 <h4 id="-">メソッド(操作)</h4>
+<p>オブジェクトが持つ処理のことです．テレビだと，「画面を表示する」や「音を出力する」がメソッドに当たる．クラスの中では，同じ名前かつ同じ引数のメソッドは複数定義できない．C言語と違って，仮引数の数や仮引数の型を変えれば同じ名前のメソッドを定義することができる．</p>
+<h4 id="-">コンストラクタ</h4>
+<p>参考：<a href="http://swift.tecc0.com/?p=262">http://swift.tecc0.com/?p=262</a><br>クラスを呼び出してインスタンスを作成する時に，必ず最初に呼ばれる関数がある(定義しない場合は，親クラスのコンストラクタを呼び出したりと色々条件があるため，今年度の演習ではインスタンスを生成するためのクラスでは必ずコンストラクタを定義していきたいと思います）．通常コンストラクタと呼ぶが，Swiftではイニシャライザと呼ばれる．(調べるときはイニシャライザで調べるとより正しい情報が出てくるかも？)．このコンストラクタでは，プロパティの変数に値を代入したり，前処理のメソッドを呼び出したりと様々なことをする．同じクラス名だが引数の数によって異なるインスタンスとして宣言できるのは，このコンストラクタの引数に依存しているからである．Javaでは，クラス名を関数として定義することで呼び出すことができるが，<strong>Swiftではinit()</strong> という関数をクラス内に定義することによってクラスを呼び出すだけでコンストラクタを呼び出すことができる．<br>以下にクラスの呼び出し(インスタンス化)とコンストラクタの定義の仕方を示す．</p>
+<pre class="editor-colors lang-swift:"><div class="line"><span class="syntax--text syntax--plain syntax--null-grammar"><span>class&nbsp;Student{</span></span></div><div class="line"><span class="syntax--text syntax--plain syntax--null-grammar"><span>&nbsp;&nbsp;var&nbsp;name&nbsp;:&nbsp;String</span></span></div><div class="line"><span class="syntax--text syntax--plain syntax--null-grammar"><span>&nbsp;&nbsp;var&nbsp;gender&nbsp;:&nbsp;String</span></span></div><div class="line"><span class="syntax--text syntax--plain syntax--null-grammar"><span>&nbsp;&nbsp;var&nbsp;no&nbsp;:&nbsp;Int</span></span></div><div class="line"><span class="syntax--text syntax--plain syntax--null-grammar"><span>&nbsp;</span></span></div><div class="line"><span class="syntax--text syntax--plain syntax--null-grammar"><span>&nbsp;&nbsp;init(){</span></span></div><div class="line"><span class="syntax--text syntax--plain syntax--null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;self.name&nbsp;=&nbsp;&quot;mirai&quot;</span></span></div><div class="line"><span class="syntax--text syntax--plain syntax--null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;self.gender&nbsp;=&nbsp;&quot;M&quot;</span></span></div><div class="line"><span class="syntax--text syntax--plain syntax--null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;self.no&nbsp;=&nbsp;1090999</span></span></div><div class="line"><span class="syntax--text syntax--plain syntax--null-grammar"><span>&nbsp;&nbsp;}</span></span></div><div class="line"><span class="syntax--text syntax--plain syntax--null-grammar"><span>&nbsp;</span></span></div><div class="line"><span class="syntax--text syntax--plain syntax--null-grammar"><span>&nbsp;&nbsp;init(name&nbsp;:&nbsp;String,&nbsp;gender&nbsp;:&nbsp;String,&nbsp;&nbsp;no&nbsp;:&nbsp;Int){</span></span></div><div class="line"><span class="syntax--text syntax--plain syntax--null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;self.name&nbsp;=&nbsp;name</span></span></div><div class="line"><span class="syntax--text syntax--plain syntax--null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;self.gender&nbsp;=&nbsp;gender</span></span></div><div class="line"><span class="syntax--text syntax--plain syntax--null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;self.no&nbsp;=&nbsp;no</span></span></div><div class="line"><span class="syntax--text syntax--plain syntax--null-grammar"><span>&nbsp;&nbsp;}</span></span></div><div class="line"><span class="syntax--text syntax--plain syntax--null-grammar"><span>}</span></span></div><div class="line"><span class="syntax--text syntax--plain syntax--null-grammar"><span>&nbsp;</span></span></div><div class="line"><span class="syntax--text syntax--plain syntax--null-grammar"><span>//別の関数やページのクラスで記述</span></span></div><div class="line"><span class="syntax--text syntax--plain syntax--null-grammar"><span>let&nbsp;student&nbsp;=&nbsp;Student()&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//Studentを引数なしで初期化</span></span></div><div class="line"><span class="syntax--text syntax--plain syntax--null-grammar"><span>print(student.name)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;&quot;mirai&quot;</span></span></div><div class="line"><span class="syntax--text syntax--plain syntax--null-grammar"><span>&nbsp;</span></span></div><div class="line"><span class="syntax--text syntax--plain syntax--null-grammar"><span>let&nbsp;student2&nbsp;=&nbsp;Student(&quot;Takagawa&quot;,&nbsp;&quot;M&quot;,&nbsp;1014223)&nbsp;&nbsp;//&nbsp;引数ありで初期化</span></span></div><div class="line"><span class="syntax--text syntax--plain syntax--null-grammar"><span>print(student2.name)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//&nbsp;&quot;Takagawa&quot;</span></span></div></pre>
+<p>ここで <strong>self</strong> という見慣れないものがあると思う．これはそのクラスの持つメンバ変数(プロパティ)を利用するという意味でinitの仮引数と被っている部分があるが，重複した時でもメンバ変数との差別化を測ることができるものである．<br>また，<strong>student.name</strong> という表記もある．これはstudentインスタンスのnameというプロパティを参照するという意味になる．値を読んだり，代入することができる．</p>
 <h4 id="-">カプセル化</h4>
+<p>カプセル化とは，インスタンスの中身を外側から見えないようにする．中身に変更を加えたいときは，必ずインスタンスを経由して変更するというものである．Google先生でGetter/Setter(ゲッター/セッター)と調べるといろいろ出てくる．privateやpublicなど様々なアクセス修飾子(アクセスコントロール)を変数につけることで，そのソースコード内だけでアクセスできたり，他のソースコードからでもアクセスできたりとすることができる．<br>※カプセル化は説明が難しいのでご了承ください．
+Swift3.0では以下の5つを使うことができる．
+Javaのprivateとはかなり特徴が異なっているので注意．特に，private internal publicを覚えて欲しいですが，privateのみを具体的に説明します．</p>
+<ul>
+<li><strong>private     : 定義されたスコープ内でのみアクセスできる</strong></li>
+<li>fileprivate : 同じソースファイル内からのみアクセスできる**</li>
+<li><strong>internal    : 同じモジュール内からのみアクセスできる(デフォルト)</strong></li>
+<li><strong>public      : 同じモジュール内だけでなく、別のモジュールからでもアクセスできるが、別モジュールでは継承、オーバーライドはできない</strong></li>
+<li>open        : 同じモジュール内だけでなく、別のモジュールからでもアクセスでき、別モジュールで継承またはオーバーライドができる</li>
+</ul>
+<p>privateの使い方．同じスコープ内のみで使用できる．上は実際にhelloメソッドを呼び出せば，Helloと表示されるが，下は，mesメソッドを呼び出した後に，helloメソッドを呼び出してもHelloは表示されない．</p>
+<pre class="editor-colors lang-swift:"><div class="line"><span class="syntax--text syntax--plain syntax--null-grammar"><span>class&nbsp;Say{</span></span></div><div class="line"><span class="syntax--text syntax--plain syntax--null-grammar"><span>&nbsp;&nbsp;private&nbsp;let&nbsp;message&nbsp;=&nbsp;&quot;Hello&quot;</span></span></div><div class="line"><span class="syntax--text syntax--plain syntax--null-grammar"><span>&nbsp;&nbsp;func&nbsp;hello(){</span></span></div><div class="line"><span class="syntax--text syntax--plain syntax--null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;print(message)</span></span></div><div class="line"><span class="syntax--text syntax--plain syntax--null-grammar"><span>&nbsp;&nbsp;}</span></span></div><div class="line"><span class="syntax--text syntax--plain syntax--null-grammar"><span>}</span></span></div><div class="line"><span class="syntax--text syntax--plain syntax--null-grammar"><span>&nbsp;</span></span></div><div class="line"><span class="syntax--text syntax--plain syntax--null-grammar"><span>class&nbsp;Say{</span></span></div><div class="line"><span class="syntax--text syntax--plain syntax--null-grammar"><span>&nbsp;&nbsp;func&nbsp;mes(){</span></span></div><div class="line"><span class="syntax--text syntax--plain syntax--null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;private&nbsp;let&nbsp;message&nbsp;=&nbsp;&quot;Hello&quot;&nbsp;&nbsp;</span></span></div><div class="line"><span class="syntax--text syntax--plain syntax--null-grammar"><span>&nbsp;&nbsp;}</span></span></div><div class="line"><span class="syntax--text syntax--plain syntax--null-grammar"><span>&nbsp;&nbsp;func&nbsp;hello(){</span></span></div><div class="line"><span class="syntax--text syntax--plain syntax--null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;print(message)</span></span></div><div class="line"><span class="syntax--text syntax--plain syntax--null-grammar"><span>&nbsp;&nbsp;}</span></span></div><div class="line"><span class="syntax--text syntax--plain syntax--null-grammar"><span>}</span></span></div></pre>
+<p>カプセル化の一般的なコードを以下に示す．上のsetMesメソッドはString型を引数として受け取り，privateのmes変数に代入する．下のgetMesはprivateのmes変数をリターンする．このようにすることで，暗黙的にmes変数の値が変わることがなくなる．mes変数を変更/参照したい場合は，これらのgetter/setterを明示的に使う．getter/setterの命名規則はset〇〇/get〇〇というふうにする．</p>
+<pre class="editor-colors lang-swift:"><div class="line"><span class="syntax--text syntax--plain syntax--null-grammar"><span>class&nbsp;Say{</span></span></div><div class="line"><span class="syntax--text syntax--plain syntax--null-grammar"><span>&nbsp;&nbsp;private&nbsp;var&nbsp;mes;</span></span></div><div class="line"><span class="syntax--text syntax--plain syntax--null-grammar"><span>&nbsp;&nbsp;public&nbsp;func&nbsp;setMes(message&nbsp;:&nbsp;String){</span></span></div><div class="line"><span class="syntax--text syntax--plain syntax--null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;mes&nbsp;=&nbsp;message</span></span></div><div class="line"><span class="syntax--text syntax--plain syntax--null-grammar"><span>&nbsp;&nbsp;}</span></span></div><div class="line"><span class="syntax--text syntax--plain syntax--null-grammar"><span>&nbsp;&nbsp;public&nbsp;func&nbsp;getMes()&nbsp;-&gt;&nbsp;String{</span></span></div><div class="line"><span class="syntax--text syntax--plain syntax--null-grammar"><span>&nbsp;&nbsp;&nbsp;&nbsp;return&nbsp;mes</span></span></div><div class="line"><span class="syntax--text syntax--plain syntax--null-grammar"><span>&nbsp;&nbsp;}</span></span></div><div class="line"><span class="syntax--text syntax--plain syntax--null-grammar"><span>}</span></span></div></pre>
 <h4 id="-">継承</h4>
-<p>####</p>
-<h2 id="ios-">iOSアプリでデータベースを扱う</h2>
-<h2 id="-">課題(画面遷移・レイアウト・簡単な処理)</h2></body>
+<p>参考: <a href="http://swift.tecc0.com/?p=275">http://swift.tecc0.com/?p=275</a>
+オブジェクト指向では，他のクラスの内容を引き継いで新しいクラスを作ることができる．例えば，日本人は名前と性別を必ず持っている．未来大生は名前と性別と学籍番号を持っている．日本人と未来大生の抽象度を比較すると，日本人＞未来大生である．学籍番号を持つとより具体的な一人の日本人を特定できるというのを「抽象度が低い」といい，日本人という括りでしか捉えられないのを「抽象度が高い」という．<br>ここで日本人と未来大生のクラスを作るとする．クラスの持つプロパティを以下のように設定する．</p>
+<ul>
+<li>日本人     → name : String, gender : String</li>
+<li>未来大生   → name : String, gender : String, no : Int</li>
+</ul>
+<p>このように，日本人と未来大生を別々に定義することもできる．しかし，未来大生のプロパティと日本人のプロパティで同じnameとgenderが存在する．同じプロパティをわざわざ宣言する必要はないので，どうにかして，日本人のプロパティを未来大生のプロパティに反映させたいというときがある．そんな時に <strong>継承</strong> をすると良い．</p>
+<pre class="editor-colors lang-swift:"><div class="line"><span class="syntax--text syntax--plain syntax--null-grammar"><span>class&nbsp;Japanese{</span></span></div><div class="line"><span class="syntax--text syntax--plain syntax--null-grammar"><span>&nbsp;&nbsp;var&nbsp;name&nbsp;:&nbsp;String</span></span></div><div class="line"><span class="syntax--text syntax--plain syntax--null-grammar"><span>&nbsp;&nbsp;var&nbsp;gender&nbsp;:&nbsp;String</span></span></div><div class="line"><span class="syntax--text syntax--plain syntax--null-grammar"><span>&nbsp;</span></span></div><div class="line"><span class="syntax--text syntax--plain syntax--null-grammar"><span>}</span></span></div><div class="line"><span class="syntax--text syntax--plain syntax--null-grammar"><span>&nbsp;</span></span></div><div class="line"><span class="syntax--text syntax--plain syntax--null-grammar"><span>class&nbsp;FUNstudent&nbsp;:&nbsp;Japanese{</span></span></div><div class="line"><span class="syntax--text syntax--plain syntax--null-grammar"><span>&nbsp;&nbsp;var&nbsp;no&nbsp;:String</span></span></div><div class="line"><span class="syntax--text syntax--plain syntax--null-grammar"><span>}</span></span></div></pre>
+<p>このように宣言することで，FUNstudentで作成されたインスタンスは変数no以外に，変数nameと変数genderを使うことができる．
+他にもメソッドを宣言しても継承さえすれば，そのメソッドを継承先で利用することができる．
+<code style="font-family: Ricty Diminished;">super().メソッド名()</code>で親クラスのメソッドを呼び出せる．(引数は適宜利用)<br><code style="font-family: Ricty Diminished;">super()</code>で親クラスのコンストラクタを呼び出せる．(引数は適宜利用)</p>
+<p><strong>以上がオブジェクト指向の最低限必要な知識です．何度も書いてますが，理解するのは時間をかけるべきだし，時間がかかるのでなんとなくこういうものがあるのかという認識で大丈夫です．</strong></p></body>
 </html>

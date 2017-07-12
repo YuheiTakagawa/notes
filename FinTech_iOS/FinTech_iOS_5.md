@@ -1,5 +1,5 @@
-<style>.syntax--plain{color:black;} #fintech-fun-ios-4-2017-06-19-{font-size:2.0em;}</style>
-# FinTech-FUN iOS勉強会第4回 2017/06/19資料
+<style>.syntax--plain{color:black;} #fintech-fun-ios-5-2017-07{font-size:2.0em;}</style>
+# FinTech-FUN iOS勉強会第5回 2017/07資料
 
 
 ## slackで質問されたこと
@@ -178,6 +178,4 @@ class FUNstudent : Japanese{
 `super()`で親クラスのコンストラクタを呼び出せる．(引数は適宜利用)
 
 
-## iOSアプリでデータベースを扱う
-## 課題(画面遷移・レイアウト・簡単な処理)
-## 並列分散処理
+**以上がオブジェクト指向の最低限必要な知識です．何度も書いてますが，理解するのは時間をかけるべきだし，時間がかかるのでなんとなくこういうものがあるのかという認識で大丈夫です．**

@@ -6,4 +6,5 @@
 - JSONを扱うDictionary <http://dev.classmethod.jp/smartphone/swift3-json/>
 - データをローカル保存する <http://dev.classmethod.jp/smartphone/swift-3-0-userdefaults/>
 - アラート/ポップアップ作成 <http://joyplot.com/documents/2016/11/12/swift-uialertcontroller/>
-- 
+- Cocoapods の導入 <http://programming-beginner-memo.com/?p=101>
+- 面白いライブラリ <http://qiita.com/u651601f/items/08500df9246a6c208241>
