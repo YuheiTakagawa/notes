@@ -10,3 +10,4 @@
 - 面白いライブラリ <http://qiita.com/u651601f/items/08500df9246a6c208241>
 - ピッカーにリストを追加する <http://qiita.com/naoki_koreeda/items/6f3057012b52979fcd9c>
 - リストの入ったピッカーを作成する <http://joyplot.com/documents/2017/03/21/swift-uipickerview/>
+- テキストフィールドで入力状態を終了する <http://joyplot.com/documents/2016/11/05/swift3-uitextfield-basic/>
