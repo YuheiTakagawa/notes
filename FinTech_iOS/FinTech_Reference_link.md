@@ -12,3 +12,4 @@
 - リストの入ったピッカーを作成する <http://joyplot.com/documents/2017/03/21/swift-uipickerview/>
 - テキストフィールドで入力状態を終了する1 <http://joyplot.com/documents/2016/11/05/swift3-uitextfield-basic/>
 - テキストフィールドで入力状態を終了する2 <https://tech.librastudio.co.jp/index.php/2017/01/18/post-1247/>
+- テキストフィールドで入力状態を終了する3 <http://qiita.com/SRAUFactory/items/7314793bd51e4075a208>
