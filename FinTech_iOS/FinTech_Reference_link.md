@@ -10,6 +10,7 @@
 - 面白いライブラリ <http://qiita.com/u651601f/items/08500df9246a6c208241>
 - ピッカーにリストを追加する <http://qiita.com/naoki_koreeda/items/6f3057012b52979fcd9c>
 - リストの入ったピッカーを作成する <http://joyplot.com/documents/2017/03/21/swift-uipickerview/>
+<<<<<<< HEAD
 - テキストフィールドで入力状態を終了する <http://joyplot.com/documents/2016/11/05/swift3-uitextfield-basic/>
 - 簡単なアプリケーション開発をたくさん経験することで開発力UP <http://www.yukisako.xyz/entry/swift-kusoapps-summery>
 - HTTP リクエストのお話 <http://qiita.com/xshirade/items/086be09376b9cbbe7bc8>
@@ -17,3 +18,8 @@
 - ナビゲーションバーがステータスバーに被らない件 <http://yumico.hatenablog.com/entry/2016/12/02/182249>
 - QRコードを読み取る <http://qiita.com/ayumu838/items/f4784cc450eb31140cf9>
 - QRコードを生成 <http://qiita.com/matsuhisa_h/items/91cdeeaf32553c3b23fb>
+=======
+- テキストフィールドで入力状態を終了する1 <http://joyplot.com/documents/2016/11/05/swift3-uitextfield-basic/>
+- テキストフィールドで入力状態を終了する2 <https://tech.librastudio.co.jp/index.php/2017/01/18/post-1247/>
+- テキストフィールドで入力状態を終了する3 <http://qiita.com/SRAUFactory/items/7314793bd51e4075a208>
+>>>>>>> 32c93a51fbd292658997acd6a61ca5042db6660f
