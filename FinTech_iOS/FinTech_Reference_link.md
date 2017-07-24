@@ -16,3 +16,4 @@
 - FlatUIKitをswift3で使うには… <http://tech.pjin.jp/blog/2016/12/15/cocoapods-3/>
 - ナビゲーションバーがステータスバーに被らない件 <http://yumico.hatenablog.com/entry/2016/12/02/182249>
 - QRコードを読み取る <http://qiita.com/ayumu838/items/f4784cc450eb31140cf9>
+- QRコードを生成 <http://qiita.com/matsuhisa_h/items/91cdeeaf32553c3b23fb>
