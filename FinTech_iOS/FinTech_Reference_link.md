@@ -14,3 +14,5 @@
 - 簡単なアプリケーション開発をたくさん経験することで開発力UP <http://www.yukisako.xyz/entry/swift-kusoapps-summery>
 - HTTP リクエストのお話 <http://qiita.com/xshirade/items/086be09376b9cbbe7bc8>
 - FlatUIKitをswift3で使うには… <http://tech.pjin.jp/blog/2016/12/15/cocoapods-3/>
+- ナビゲーションバーがステータスバーに被らない件 <http://yumico.hatenablog.com/entry/2016/12/02/182249>
+- QRコードを読み取る <http://qiita.com/ayumu838/items/f4784cc450eb31140cf9>
