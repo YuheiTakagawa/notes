@@ -10,7 +10,6 @@
 - 面白いライブラリ <http://qiita.com/u651601f/items/08500df9246a6c208241>
 - ピッカーにリストを追加する <http://qiita.com/naoki_koreeda/items/6f3057012b52979fcd9c>
 - リストの入ったピッカーを作成する <http://joyplot.com/documents/2017/03/21/swift-uipickerview/>
-- テキストフィールドで入力状態を終了する <http://joyplot.com/documents/2016/11/05/swift3-uitextfield-basic/>
 - 簡単なアプリケーション開発をたくさん経験することで開発力UP <http://www.yukisako.xyz/entry/swift-kusoapps-summery>
 - HTTP リクエストのお話 <http://qiita.com/xshirade/items/086be09376b9cbbe7bc8>
 - FlatUIKitをswift3で使うには… <http://tech.pjin.jp/blog/2016/12/15/cocoapods-3/>
@@ -20,3 +19,4 @@
 - テキストフィールドで入力状態を終了する1 <http://joyplot.com/documents/2016/11/05/swift3-uitextfield-basic/>
 - テキストフィールドで入力状態を終了する2 <https://tech.librastudio.co.jp/index.php/2017/01/18/post-1247/>
 - テキストフィールドで入力状態を終了する3 <http://qiita.com/SRAUFactory/items/7314793bd51e4075a208>
+- テキストフィールドのキーボードで入力フォームが隠れないようにする<http://qiita.com/kobaboy/items/d56086b92f84c586562d>
