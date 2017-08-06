@@ -20,3 +20,4 @@
 - テキストフィールドで入力状態を終了する2 <https://tech.librastudio.co.jp/index.php/2017/01/18/post-1247/>
 - テキストフィールドで入力状態を終了する3 <http://qiita.com/SRAUFactory/items/7314793bd51e4075a208>
 - テキストフィールドを隠れないようにする(要GitHub参照)<http://qiita.com/Yosuke0006/items/d95bf8d9b4c52f020fd5>
+- swift3でstoryboardのコンフリクトが発生した時の対処2<https://gist.github.com/miminashi/5217195>
