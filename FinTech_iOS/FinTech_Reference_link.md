@@ -19,4 +19,4 @@
 - テキストフィールドで入力状態を終了する1 <http://joyplot.com/documents/2016/11/05/swift3-uitextfield-basic/>
 - テキストフィールドで入力状態を終了する2 <https://tech.librastudio.co.jp/index.php/2017/01/18/post-1247/>
 - テキストフィールドで入力状態を終了する3 <http://qiita.com/SRAUFactory/items/7314793bd51e4075a208>
-- テキストフィールドのキーボードで入力フォームが隠れないようにする<http://qiita.com/kobaboy/items/d56086b92f84c586562d>
+- テキストフィールドを隠れないようにする(要GitHub参照)<http://qiita.com/Yosuke0006/items/d95bf8d9b4c52f020fd5>
