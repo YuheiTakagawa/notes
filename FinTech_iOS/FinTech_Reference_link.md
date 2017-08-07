@@ -14,10 +14,11 @@
 - HTTP リクエストのお話 <http://qiita.com/xshirade/items/086be09376b9cbbe7bc8>
 - FlatUIKitをswift3で使うには… <http://tech.pjin.jp/blog/2016/12/15/cocoapods-3/>
 - ナビゲーションバーがステータスバーに被らない件 <http://yumico.hatenablog.com/entry/2016/12/02/182249>
-- QRコードを読み取る <http://qiita.com/ayumu838/items/f4784cc450eb31140cf9>
+- QRコードを読み取り1 <http://qiita.com/ayumu838/items/f4784cc450eb31140cf9>
 - QRコードを生成 <http://qiita.com/matsuhisa_h/items/91cdeeaf32553c3b23fb>
 - テキストフィールドで入力状態を終了する1 <http://joyplot.com/documents/2016/11/05/swift3-uitextfield-basic/>
 - テキストフィールドで入力状態を終了する2 <https://tech.librastudio.co.jp/index.php/2017/01/18/post-1247/>
 - テキストフィールドで入力状態を終了する3 <http://qiita.com/SRAUFactory/items/7314793bd51e4075a208>
 - テキストフィールドを隠れないようにする(要GitHub参照)<http://qiita.com/Yosuke0006/items/d95bf8d9b4c52f020fd5>
 - swift3でstoryboardのコンフリクトが発生した時の対処2<https://gist.github.com/miminashi/5217195>
+- QRコード読み取り2<http://ryuta46.com/150>
