@@ -22,3 +22,8 @@
 - テキストフィールドを隠れないようにする(要GitHub参照)<http://qiita.com/Yosuke0006/items/d95bf8d9b4c52f020fd5>
 - swift3でstoryboardのコンフリクトが発生した時の対処2<https://gist.github.com/miminashi/5217195>
 - QRコード読み取り2<http://ryuta46.com/150>
+- swift開発でstoryboardがコンフリクトしない開発体制<https://teratail.com/questions/9343>
+- コンフリクトを起こさないようにstoryboardを分けて開発<http://dev.classmethod.jp/smartphone/iphone/ios-separate-storyboard/>
+-- 個人的には，はじめにstoryboardを全部作って変更する際は一人だけが変更する．ただし，臨機応変に一部の画面だけ作るとかにした方がいい(後者はハッカソン向け)
+- AutoLayoutを使って端末に依存しない画面を作る<http://type.jp/et/log/article/ra-ios-tips06>
+-- いろいろ難しいし使いにくいところもあるけど，使いこなすと最強らしい
