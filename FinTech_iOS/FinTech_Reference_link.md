@@ -27,3 +27,5 @@
 	- 個人的には，はじめにstoryboardを全部作って変更する際は一人だけが変更する．ただし，臨機応変に一部の画面だけ作るとかにした方がいい(後者はハッカソン向け)
 - AutoLayoutを使って端末に依存しない画面を作る<http://type.jp/et/log/article/ra-ios-tips06>
 	- いろいろ難しいし使いにくいところもあるけど，使いこなすと最強らしい
+- DataとStringの相互変換<http://qiita.com/yuki-k/items/3c1f60a2633a2c6e712f>
+	- HTTP通信で得られるDataはdefaultではバイト数？なので文字列に変換したりJsonに変換したりすることで実際に使えるようになる
