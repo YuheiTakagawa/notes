@@ -29,3 +29,4 @@
 	- いろいろ難しいし使いにくいところもあるけど，使いこなすと最強らしい
 - DataとStringの相互変換<http://qiita.com/yuki-k/items/3c1f60a2633a2c6e712f>
 	- HTTP通信で得られるDataはdefaultではバイト数？なので文字列に変換したりJsonに変換したりすることで実際に使えるようになる
+- HTTP通信2<https://m-tmatma.github.io/swift3/URLSessionTest.html>
