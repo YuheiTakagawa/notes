@@ -31,3 +31,5 @@
 	- HTTP通信で得られるDataはdefaultではバイト数？なので文字列に変換したりJsonに変換したりすることで実際に使えるようになる
 - Data構造体を使う<http://glassonion.hatenablog.com/entry/2017/01/20/003716>
 - HTTP通信2<https://m-tmatma.github.io/swift3/URLSessionTest.html>
+- HTTP通信とは何か<http://qiita.com/Sekky0905/items/dff3d0da059d6f5bfabf>
+	- HTTP通信の概要や出てくる用語の解説があります
